@@ -1215,6 +1215,55 @@ p, ul, ol, body {
   max-width: 57rem;
 }
 
+.section-header {
+  max-width: 50rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.section-header p {
+  max-width: 53ch;
+  margin-inline: auto;
+}
+
+.hero {
+  background-image: url("../../../assets/images/home-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+.hero--80vh {
+  height: 80vh;
+}
+.hero__wrapper {
+  display: grid;
+  align-items: center;
+  height: 84vh;
+}
+@media only screen and (min-width: 36em) {
+  .hero__wrapper {
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .hero__wrapper {
+    height: 76vh;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .hero__wrapper {
+    height: 70vh;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .hero__wrapper {
+    height: 76vh;
+  }
+}
+.hero__subTitle {
+  max-width: 50rem;
+}
+
 .hero-footer {
   display: flex;
   justify-content: flex-end;
@@ -1299,52 +1348,6 @@ p, ul, ol, body {
 .hero-footer__link.active::before, .hero-footer__link:hover::before {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-.section-header {
-  max-width: 50rem;
-  margin-inline: auto;
-  text-align: center;
-}
-.section-header p {
-  max-width: 53ch;
-  margin-inline: auto;
-}
-
-.hero {
-  background-image: url("../../../assets/images/home-banner.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
-}
-.hero__wrapper {
-  display: grid;
-  align-items: center;
-  height: 84vh;
-}
-@media only screen and (min-width: 36em) {
-  .hero__wrapper {
-    height: 80vh;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .hero__wrapper {
-    height: 76vh;
-  }
-}
-@media only screen and (min-width: 75em) {
-  .hero__wrapper {
-    height: 70vh;
-  }
-}
-@media only screen and (min-width: 90em) {
-  .hero__wrapper {
-    height: 76vh;
-  }
-}
-.hero__subTitle {
-  max-width: 50rem;
 }
 
 .innovation__middle-wrapper {

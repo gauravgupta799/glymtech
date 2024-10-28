@@ -9,6 +9,46 @@
     max-width: 57rem;
 }
 
+.section-header{
+    max-width: 50rem;
+    margin-inline: auto;
+    text-align: center;
+    p{
+        max-width: 53ch;
+        margin-inline: auto;
+    }
+}
+
+
+.hero{
+    background-image:url("../../../assets/images/home-banner.png");
+    @include background-cover;
+    height: 100vh;
+    &--80vh{
+        height: 80vh;
+    }
+    &__wrapper{
+        display: grid;
+        align-items: center;
+        height: 84vh;
+        @include breakpoint-sm{
+            height: 80vh;
+        }
+        @include breakpoint-md{
+            height: 76vh;
+        }
+        @include breakpoint-xl{
+            height: 70vh;
+        }
+        @media only screen and (min-width:em(1440)){
+            height: 76vh;
+        }
+    }
+    &__subTitle{
+        max-width: 50rem;
+    }
+}
+
 .hero-footer{
     display: flex;
     justify-content: flex-end;
@@ -65,44 +105,6 @@
                 transform-origin: left;
             }
         }
-    }
-}
-
-
-.section-header{
-    max-width: 50rem;
-    margin-inline: auto;
-    text-align: center;
-    p{
-        max-width: 53ch;
-        margin-inline: auto;
-    }
-}
-
-
-.hero{
-    background-image:url("../../../assets/images/home-banner.png");
-    @include background-cover;
-    height: 100vh;
-    &__wrapper{
-        display: grid;
-        align-items: center;
-        height: 84vh;
-        @include breakpoint-sm{
-            height: 80vh;
-        }
-        @include breakpoint-md{
-            height: 76vh;
-        }
-        @include breakpoint-xl{
-            height: 70vh;
-        }
-        @media only screen and (min-width:em(1440)){
-            height: 76vh;
-        }
-    }
-    &__subTitle{
-        max-width: 50rem;
     }
 }
 
