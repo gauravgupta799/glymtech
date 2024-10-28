@@ -206,8 +206,20 @@ select {
 
 
 .lbl {
+    font-family: $ff-secondary;
     vertical-align: middle;
     cursor: pointer;
+    a{
+        text-decoration: underline;
+        text-decoration-color: $clr-primary;
+        -moz-text-decoration-color: $clr-primary;
+        @include transition(all, 0.25s, ease-out);
+        &:hover{
+            color:$clr-secondary;
+            text-decoration-color: $clr-secondary;
+            -moz-text-decoration-color: $clr-secondary;
+        }
+    }
 }
 
 #cbx:checked ~ .cbx {

@@ -2332,8 +2332,20 @@ select {
 }
 
 .lbl {
+  font-family: "DM-sans-Regular", sans-serif;
   vertical-align: middle;
   cursor: pointer;
+}
+.lbl a {
+  text-decoration: underline;
+  text-decoration-color: #001C26;
+  -moz-text-decoration-color: #001C26;
+  transition: all 0.25s ease-out;
+}
+.lbl a:hover {
+  color: #33DEE6;
+  text-decoration-color: #33DEE6;
+  -moz-text-decoration-color: #33DEE6;
 }
 
 #cbx:checked ~ .cbx {
