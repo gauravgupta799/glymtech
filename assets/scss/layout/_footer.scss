@@ -1,0 +1,178 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.footer{
+    background: $clr-primary;
+    &__list-right{
+        display: grid;
+        gap: rem(12);
+        @include breakpoint-lg{
+            justify-content: flex-end;
+        }
+        li{
+            @include flex-center-vertical;
+            gap:rem(20);
+            @media only screen and (min-width:em(378)){
+                align-items: center; 
+                gap:rem(16); 
+            }
+            span{
+                color:$clr-white;
+            } 
+        }
+    }
+    &__link{
+        position: relative;
+        font-size: rem(16);
+        line-height: 2;
+        text-transform: capitalize;
+        z-index: 1;
+        color:$clr-white;
+        @include transition(color, 0.3s , ease);
+        @include link-hover(rem(-4), 100%, rem(1), $clr-linear-gradient-opposite);
+        span{
+            color:$clr-white;
+            @include transition(color, 0.3s , ease);
+        }
+        address{
+            @extend .footer__link;
+            font-family: $ff-secondary;
+            display: inline-flex;
+            line-height: 1.5;
+        }
+        &:hover{
+            color:$clr-secondary;
+            span{
+                color:$clr-secondary;
+            }
+            &::before{
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+        }
+        &::selection{
+           background-color: $clr-white;
+           color:$clr-primary;
+        }
+    }
+    &__bottom-container{
+        @include flex-space-between;
+        flex-wrap: wrap;
+        gap:rem(6);
+        @include breakpoint-sm{
+            gap:rem(16);
+        }
+    }
+}
+
+
+
+// ===== Socials Link Styles Start =====
+.socials-item{
+    @include relative-hidden;
+}
+
+.socials-list {
+    list-style: none;
+    display: flex;
+    gap:0.75rem;
+    &--mobile{
+        .socials-link{
+            background: $clr-secondary;
+            transition:all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+            &:hover{
+                cursor: pointer;
+                background: $clr-white;
+                svg path{
+                    fill: $clr-primary;
+                }
+            } 
+        }
+    }
+}
+
+.socials-link{
+    @include relative-hidden;
+    @include flex-center; 
+    @include border-radius(50%);
+    background: $clr-secondary;
+    padding:em(10);
+    @include dimensions(rem(32), rem(32));
+    transition:all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: 1;
+    @include hover-effect($clr-white);
+    span{
+        display: flex;
+    }
+    &:hover{
+        cursor: pointer;
+        &::before{
+            transform: translateY(0);
+        }
+    } 
+}
+
+// ===== Socials Link Styles End =====
+
+
+.app-stores{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:rem(16);
+    @include breakpoint-md{
+        flex-wrap: nowrap;
+        gap:rem(24);
+    }
+    @include breakpoint-xxl{
+        gap:rem(32);
+    }
+}
+
+.reserved-info-wrapper{
+    @include flex-center-vertical;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint-md{
+        gap:rem(32);
+    }
+    @include breakpoint-lg{
+        gap:rem(0);
+        justify-content: flex-start;
+    }
+    @include breakpoint-xl{
+        gap:rem(20)
+    }
+    @media only screen and (min-width: em(1280)){
+        gap: rem(48);
+    }
+    @media only screen and (min-width: em(1366)){
+        gap: rem(80);
+    }
+}
+
+.designed-by-text{
+    @include flex-center-vertical;
+    color:$clr-white;
+    gap: rem(4);
+    a{
+        color:$clr-white;
+        font-size: rem(16);
+        text-decoration:underline;
+        text-decoration-color: $clr-white;
+        text-underline-offset: 2px;
+        @include transition(color, 0.3s, ease);
+        &:hover{
+            color:$clr-secondary;
+            text-decoration-color: $clr-secondary;
+        }
+        
+    }
+    @include breakpoint-md{
+        justify-content: flex-end;
+    }
+}

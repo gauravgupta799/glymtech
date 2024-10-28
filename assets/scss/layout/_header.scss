@@ -1,0 +1,74 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+// ================================
+.header{
+    position: fixed;
+    z-index: 9;
+    top:0;
+    left: 0;
+    width: 100%;
+    @include transition(top, 0.5s, ease-out);
+
+    &.hidden{
+        top: rem(-136);
+    }
+    &__inner-desktop{
+        position: relative;
+        @include flex-center-vertical;
+        justify-content: space-between;
+        transition: transform 0.3s ease;
+        padding-block:em(8);
+    }
+    &__mobile{
+        @extend .header__inner-desktop;
+        display: flex;
+        padding:em(16);
+        margin-top: rem(16);
+        @include breakpoint-xl{
+            display: none;
+        }
+    }
+    &__right{
+        @include flex-center-vertical;
+        gap: 1.4rem;
+    }
+}
+
+// .header-logo{
+//     img{
+//         max-width:rem(224);
+//         @media only screen and (min-width:em(408)){
+//             max-width:rem(256); 
+//         }
+//         @include breakpoint-sm{
+//             max-width:rem(272);
+//         }
+//         @include breakpoint-md{
+//             max-width:100%;
+//         }
+//     }
+// }
+
+.header-desktop{
+    transition:all 0.3s ease;
+}
+
+.header-desktop.sticky{
+    background-color: $clr-primary;
+    box-shadow: 0 2px 5px $linear-gradient-clr;
+    border-color:$clr-white;
+}
+
+
+// ========== hamburger =============
+.hamburger-wrapper{
+    cursor: pointer;
+    display: flex;
+    @media only screen and (min-width:em(1400)){
+        display: none;
+    }
+}

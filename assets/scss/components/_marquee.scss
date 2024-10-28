@@ -1,0 +1,84 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.marquee-container{
+    position: relative;
+    overflow: hidden;
+    // box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.marquee-wrapper{
+  display:flex;
+  padding-block:1.25em;
+  white-space: nowrap;
+  gap: rem(48);
+  @include breakpoint-sm{
+    gap: rem(80);
+  }
+  @include breakpoint-md{
+    gap: rem(96);
+  }
+  @include breakpoint-lg{
+    gap: rem(112);
+  }
+  @include breakpoint-xl{
+    gap: rem(128);
+  }
+  @include breakpoint-xxl{
+    gap: rem(144);
+  }
+  @include breakpoint-xxxl{
+    gap: rem(160);
+  }
+
+
+  .marquee-list{
+    @include flex-center-vertical;
+    list-style: none; 
+    white-space: nowrap;
+    animation: marquee-list 20s linear infinite;
+    gap: rem(48);
+    @include breakpoint-sm{
+      gap: rem(80);
+    }
+    @include breakpoint-md{
+      gap: rem(96);
+    }
+    @include breakpoint-lg{
+      gap: rem(112);
+    }
+    @include breakpoint-xl{
+      gap: rem(128);
+    }
+
+  }
+  
+  .marquee-list li {
+    @include flex-center-vertical;
+    gap:rem(48);
+    padding-inline:1.5rem;
+    @include breakpoint-lg{
+      padding-inline:2.5rem;
+    }
+    @include breakpoint-xxl{
+      padding-inline:3.5rem;
+    }
+    figure{
+      flex-shrink: 0;
+    }
+  }
+}
+  
+
+/* Keyframes for the marquee animation */
+@keyframes marquee-list {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
