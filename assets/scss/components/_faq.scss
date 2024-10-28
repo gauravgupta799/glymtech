@@ -129,6 +129,23 @@
             grid-gap:rem(144);
         }
     }
+    &--cards-news{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap:rem(20);
+        @include breakpoint-sm{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:rem(24) rem(16);
+        }
+        @include breakpoint-lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap:rem(32) rem(16);
+        }
+        @include breakpoint-xl{
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap:rem(64) rem(16);
+        }
+    }
 }
 
 

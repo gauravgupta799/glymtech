@@ -1396,7 +1396,7 @@ p, ul, ol, body {
   width: 100%;
 }
 
-.tab-content-container {
+.card-container {
   display: grid;
   gap: 1rem;
   grid-template-rows: repeat(1, 1fr);
@@ -1404,13 +1404,13 @@ p, ul, ol, body {
   grid-template-areas: "col-1" "col-2" "col-3" "col-4";
 }
 @media only screen and (min-width: 36em) {
-  .tab-content-container {
+  .card-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "col-1 col-2" "col-3 col-4";
   }
 }
 @media only screen and (min-width: 87.5em) {
-  .tab-content-container {
+  .card-container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "col-1 col-2 col-3" "col-1 col-2 col-4";
   }
@@ -2700,6 +2700,29 @@ p, ul, ol, body {
 @media only screen and (min-width: 100em) {
   .grid--innovation {
     grid-gap: 9rem;
+  }
+}
+.grid--cards-news {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1.25rem;
+}
+@media only screen and (min-width: 36em) {
+  .grid--cards-news {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem 1rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .grid--cards-news {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem 1rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .grid--cards-news {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem 1rem;
   }
 }
 
