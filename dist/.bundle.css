@@ -2201,6 +2201,151 @@ p, ul, ol, body {
   fill: #000000;
 }
 
+.form-container {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.form-wrapper-inner {
+  display: flex;
+  justify-content: center;
+}
+.form-wrapper-inner button {
+  margin-left: -2rem;
+}
+
+.form__group-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.form__group {
+  position: relative;
+  width: 100%;
+}
+.form__control {
+  outline: none;
+  border: none;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  font-family: "DM-sans-Regular", sans-serif;
+  caret-color: #33DEE6;
+  outline: 1px solid #000000;
+  font-size: 1rem;
+  line-height: 1.75;
+  padding: 0.75em 1em;
+}
+.form__control::-moz-placeholder {
+  color: #000000;
+}
+.form__control::placeholder {
+  color: #000000;
+}
+.form__label {
+  display: inline-block;
+  pointer-events: none;
+  position: absolute;
+  text-transform: capitalize;
+  font-family: "DM-sans-Regular", sans-serif;
+  color: #000000;
+  top: 50%;
+  left: 1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  padding-left: 1em;
+  margin-bottom: 0;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.form__label--textarea {
+  top: 20%;
+}
+
+.form__control:focus + label,
+.form__control:valid + label {
+  top: 0;
+  font-size: 0.875rem;
+  padding-inline: 0.5rem;
+  background-color: #ffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  line-height: 1.25;
+}
+
+.form__control:focus {
+  outline-color: #33DEE6;
+}
+.form__control:focus + label {
+  color: #33DEE6;
+}
+
+select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  width: 100%;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+.checkbox-container {
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (min-width: 36em) {
+  .checkbox-container {
+    align-items: center;
+  }
+}
+
+.checkbox-group {
+  position: relative;
+}
+.checkbox-group input {
+  display: none !important;
+}
+
+.cbx {
+  position: relative;
+  top: 1px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #b4b4b4;
+  border-radius: 3px;
+  transition: background 0.1s ease;
+  cursor: pointer;
+  display: block;
+}
+.cbx::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 0.4375rem;
+  height: 0.875rem;
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.lbl {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#cbx:checked ~ .cbx {
+  border-color: transparent;
+  background: #33DEE6;
+}
+
+#cbx:checked ~ .cbx:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
 .nav {
   display: none;
 }
@@ -3172,6 +3317,11 @@ p, ul, ol, body {
 
 .list-pos-outside {
   list-style-position: outside;
+}
+
+.fz-12 {
+  font-size: 0.75rem;
+  left: 1.33;
 }
 
 .fz-14 {
