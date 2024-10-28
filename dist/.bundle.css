@@ -3106,6 +3106,10 @@ p, ul, ol, body {
   background: #F1F1F1;
 }
 
+.bg--grey-3 {
+  background: #F6F7FB;
+}
+
 .bg--white {
   background: #ffffff;
 }
