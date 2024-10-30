@@ -1593,6 +1593,39 @@ p, ul, ol, body {
   display: inline-flex;
 }
 
+.hero-footer-banner {
+  margin-top: -6rem;
+  border-radius: 12px;
+}
+.hero-footer-banner p {
+  font-size: 0.875rem;
+}
+@media only screen and (min-width: 48em) {
+  .hero-footer-banner p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .hero-footer-banner p {
+    font-size: 1.125rem;
+  }
+}
+.hero-footer-banner .quote-p {
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-family: "Mulish-Bold", sans-serif;
+}
+@media only screen and (min-width: 36em) {
+  .hero-footer-banner .quote-p {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .hero-footer-banner .quote-p {
+    font-size: 1.5rem;
+  }
+}
+
 .header {
   position: fixed;
   z-index: 9;

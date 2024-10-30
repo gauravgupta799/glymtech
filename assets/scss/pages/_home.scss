@@ -343,3 +343,30 @@
         display: inline-flex;
     }
 }
+
+// About
+.hero-footer-banner{
+    margin-top: -6rem;
+    @include border-radius(12px);
+    p{
+        font-size: rem(14);
+        @include breakpoint-md{
+            font-size: rem(16);
+        }
+        @include breakpoint-xxl{
+            font-size: rem(18);
+        }
+    }
+    .quote-p{
+        font-size: rem(18);
+        line-height: 1.33;
+        font-family: $ff-primary;
+        @include breakpoint-sm{
+            font-size: rem(20);
+        }
+        @include breakpoint-xxl{
+            font-size: rem(24);
+        }
+    }
+
+}
