@@ -21,7 +21,7 @@
 
 
 .hero{
-    background-image:url("../../../assets/images/home-banner.png");
+    background-image:url("../assets/images/home-banner.png");
     @include background-cover;
     height: 100vh;
     &--80vh{
@@ -306,7 +306,7 @@
     overflow: hidden;
     z-index: 1;
     &::after{
-        content: url("../../../assets/icons/spiral-4.svg");
+        content: url("../assets/icons/spiral-4.svg");
         position: absolute;
         left: 0;
         top: 0;
@@ -321,7 +321,7 @@
     overflow: hidden;
     z-index: 1;
     &::after{
-        content: url("../../../assets/icons/spiral-4.svg");
+        content: url("../assets/icons/spiral-4.svg");
         position: absolute;
         right: 0;
         bottom: 0;
@@ -335,7 +335,7 @@
     overflow: hidden;
     z-index: 1;
     &::after{
-        content: url("../../../assets/icons/spiral-3.svg");
+        content: url("../assets/icons/spiral-3.svg");
         position: absolute;
         right: 0;
         top: 0;
