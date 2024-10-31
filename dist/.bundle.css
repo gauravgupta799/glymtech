@@ -1221,7 +1221,7 @@ p, ul, ol, body {
   text-align: center;
 }
 .section-header p {
-  max-width: 53ch;
+  max-width: 54ch;
   margin-inline: auto;
 }
 
@@ -1547,7 +1547,7 @@ p, ul, ol, body {
 }
 
 .card-contents {
-  max-width: 25rem;
+  max-width: 26rem;
 }
 
 .innovation {
@@ -1977,7 +1977,7 @@ p, ul, ol, body {
   transition: all 0.3s ease;
   z-index: 1;
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 100em) {
   .btn {
     font-size: 1rem;
   }

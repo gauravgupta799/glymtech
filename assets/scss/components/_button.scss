@@ -18,7 +18,7 @@
     padding:em(14) em(32);
     @include transition(all, 0.3s, ease);
     z-index: 1;
-    @include breakpoint-lg{
+    @include breakpoint-xxl{
         font-size:rem(16);
     }
     span{
