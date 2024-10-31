@@ -2927,7 +2927,7 @@ select {
 .grid--innovation {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 3rem;
+  row-gap: 3.375rem;
 }
 @media only screen and (min-width: 36em) {
   .grid--innovation {

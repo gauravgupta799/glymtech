@@ -113,7 +113,7 @@
     &--innovation{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        row-gap:rem(48);
+        row-gap:rem(54);
         @include breakpoint-sm{
             grid-template-columns: repeat(2, 1fr);
             grid-gap:rem(64);
