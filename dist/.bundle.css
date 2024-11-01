@@ -1354,10 +1354,76 @@ p, ul, ol, body {
   position: relative;
 }
 
+.steps__list {
+  position: relative;
+  z-index: 1;
+}
+.steps__list::before {
+  content: "";
+  position: absolute;
+  background-image: repeating-linear-gradient(180deg, transparent, transparent 3px, #ffffff 0, #ffffff 8px);
+  height: 80%;
+  width: 2px;
+  transform: translate(10px);
+  z-index: -1;
+}
+@media only screen and (min-width: 36em) {
+  .steps__list::before {
+    height: 90%;
+    transform: translate(15px);
+  }
+}
+.steps__list li {
+  display: flex;
+  gap: 1.25rem;
+}
+@media only screen and (min-width: 36em) {
+  .steps__list li {
+    gap: 1.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .steps__list li {
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .steps__list li {
+    gap: 2.25rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .steps__list li {
+    gap: 2.5rem;
+  }
+}
 .steps__number {
-  font-size: 1.5rem;
-  line-height: 2.5;
+  font-size: 2rem;
+  line-height: 2;
   font-family: "Mulish-Bold", sans-serif;
+  background: #001C26;
+  height: 5rem;
+}
+@media only screen and (min-width: 36em) {
+  .steps__number {
+    font-size: 2.25rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .steps__number {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .steps__number {
+    font-size: 2.75rem;
+    line-height: 1.5;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .steps__number {
+    font-size: 3rem;
+  }
 }
 
 .tab__container {

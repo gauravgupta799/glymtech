@@ -115,10 +115,64 @@
 }
 
 .steps{
+    &__list{
+        position: relative;
+        z-index: 1;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: repeating-linear-gradient(180deg, transparent, transparent 3px, $clr-white 0, $clr-white 8px);
+            height: 80%;
+            width: 2px;
+            transform: translate(10px);
+            z-index: -1;
+            @include breakpoint-sm{
+                height: 90%;
+                transform: translate(15px);
+            }
+        }
+        li{
+            display: flex;
+            gap:rem(20);
+            @include breakpoint-sm{
+                gap:rem(28);
+            }
+            @include breakpoint-md{
+                gap:rem(32);
+            }
+            @include breakpoint-lg{
+                gap:rem(36);
+            }
+            @include breakpoint-xl{
+                gap:rem(40);
+            }
+        }
+    }
     &__number{
-        font-size: rem(24);
-        line-height: 2.5;
+        font-size: rem(32);
+        line-height: 2;
         font-family: $ff-primary;
+        background: $clr-primary;
+        height: rem(80);
+        @include breakpoint-sm{
+            font-size: rem(36);
+        }
+        @include breakpoint-md{
+            font-size: rem(40);
+        }
+        @include breakpoint-lg{
+            font-size: rem(44);
+            line-height: 1.5;
+        }
+        @include breakpoint-xl{
+            font-size: rem(48);
+        }
+        // @include breakpoint-xxl{
+        //     font-size: rem(44);
+        // }
+        // @include breakpoint-xxxl{
+        //     font-size: rem(48);
+        // }
     }
 }
 
