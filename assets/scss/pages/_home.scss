@@ -19,7 +19,6 @@
     }
 }
 
-
 .hero{
     background-image:url("../assets/images/home-banner.png");
     @include background-cover;
@@ -219,6 +218,42 @@
             &::before{
                 width: 100%;
             }
+        }
+    }
+}
+
+.progress-indicator {
+    position: relative;
+    &::after{
+        content: "+";
+        position: absolute;
+        right: 0;
+        color:$clr-primary;
+        background: $clr-white;
+        font-size: rem(24);
+        @include dimensions(rem(32),rem(32));
+        @include flex-center;
+        border: 1px solid $clr-primary;
+        margin-top:rem(-32);
+        @include breakpoint-sm{
+            font-size: rem(28);
+            @include dimensions(rem(44),rem(44)); 
+        }
+        @include breakpoint-lg{
+            font-size: rem(32);
+            @include dimensions(rem(48),rem(48));
+        }
+        @include breakpoint-xl{
+            @include dimensions(rem(52),rem(52));
+        }
+    }
+    &--timeline{
+        &::after{
+            content: "";
+            border:none;
+            margin:0;
+            width: 0;
+            height: 0;
         }
     }
 }

@@ -196,6 +196,7 @@
             background-color: $clr-secondary;
             border-color: $clr-secondary;
             color: $clr-secondary;
+            @include border-radius(50%);
 
             &::before, &::after {
                 content: "";

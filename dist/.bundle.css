@@ -1462,6 +1462,52 @@ p, ul, ol, body {
   width: 100%;
 }
 
+.progress-indicator {
+  position: relative;
+}
+.progress-indicator::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  color: #001C26;
+  background: #ffffff;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #001C26;
+  margin-top: -2rem;
+}
+@media only screen and (min-width: 36em) {
+  .progress-indicator::after {
+    font-size: 1.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .progress-indicator::after {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .progress-indicator::after {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+.progress-indicator--timeline::after {
+  content: "";
+  border: none;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
 .card-container {
   display: grid;
   gap: 1rem;
@@ -3095,6 +3141,7 @@ select {
   background-color: #33DEE6;
   border-color: #33DEE6;
   color: #33DEE6;
+  border-radius: 50%;
 }
 .progress-indicator li .bubble::before, .progress-indicator li .bubble::after {
   content: "";
